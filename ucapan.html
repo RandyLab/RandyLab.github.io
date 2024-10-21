@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Ucapan</title>
+    <link rel="stylesheet" href="style.css">
+           <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    
+<section class="hero" id="hero">
+        
+   <button onclick="surprizeCard()" class="cardPrize" id="butt">what?</button> 
+  <div class="duar" id="duar">
+  
+    <h2>Happy Birthday</h2>
+    <h4>Terima Kasih karena telah menjadi teman yang luar biasa. Sehat-sehat selalu. Ula Gutul</h4>
+    
+ <div class="container">
+    <div class="card">
+      <legend>Profile</legend>
+    <div class="grid-container">
+        <div class="image-cell">
+            <img src="img/adit.jpg" alt="Gambar" />
+            <i class="bi bi-gift-fill"></i>
+        </div>
+        <div class="name-cell">Aditia Maro Brema Purba</div>
+        <div class="info-cell">Umur 17 Tahun</div>
+    </div>
+
+ <div class="sifat">
+      <p>  Baik, sopan, dermawan, ganteng idaman cindo, kadang kayak pleerrr Thanos</p>
+      <div class="mitsuri">
+        <img src="img/mitsuri.gif">
+      </div> 
+    </div>
+    </div>
+  </div>
+<a href="#info" id="scroll">
+ <div class="scroll">
+   Scroll Down <br> <br>
+   <i class="bi bi-arrow-down-circle-fill"></i>
+ </div>
+</a>
+  </div>
+
+    
+</section>
+    
+    <section class="info" id="info">
+      <h3>Ulang Tahun</h3>
+      <h2>La kuteh Kai man Kataken</h2>
+      
+      <button class="surprize" id="contol" onmousedown="surprize()">
+        Kontol
+      </button>
+      
+     <div class="image-container" id="kejutan">
+      <div class="imgInf1">
+           <img src="img/fotoInfo1.jpg" class="border-img">
+      </div>
+      <div class="imgInf2">
+           <img src="img/fotoInfo2.jpg"
+           class="border-img"
+           >
+      </div> 
+      
+      <div class="imgInf3">
+           <img src="img/fotoInfo3.jpg"
+           class="border-img"
+           >
+      </div>
+      <div class="imgInf4">
+           <img src="img/fotoInfo4.jpg"
+           class="border-img"
+           >
+      </div>
+  </div>    
+    </section>
+    
+    <script>
+      function surprize(){
+        const gift = document.getElementById("kejutan")
+        let butt = document.getElementById("contol")
+        gift.style.opacity = "1";
+        gift.style.height = "50vh";
+        butt.style.opacity = "0";
+        } 
+      
+      function surprizeCard(){
+        const butt = document.getElementById("butt")
+        const card = document.getElementById("duar")
+        const info = document.getElementById("info")
+        const scroll = document.getElementById("scroll")
+        
+        butt.style.opacity = "0";
+        
+        card.style.opacity = "1";
+        
+        scroll.style.display = "block";
+        info.style.display = "block" ;
+      } 
+      
+    </script>
+    
+  </body>
+</html>
