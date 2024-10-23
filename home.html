@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="home.css" type="text/css" media="all" />
+		<title>RIZZQ'S Kitchen</title>
+	</head>
+	<body>
+		<nav>
+			<ul class="sidebar">
+				<li onclick="hideSidebar()">
+					<a href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="24px"
+							viewBox="0 -960 960 960"
+							width="24px"
+							fill="#000000"
+						>
+							<path
+								d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+							/>
+						</svg>
+					</a>
+				</li>
+				<li><a onclick="hideSidebar()" href="#home">Home</a></li>
+				<li><a onclick="hideSidebar()" href="#shop">Shop</a></li>
+				<li><a onclick="hideSidebar()" href="#">About</a></li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#"><img src="" alt="RIZZQ'S" /></a>
+				</li>
+				<li class="hideOnM"><a href="#">Home</a></li>
+				<li class="hideOnM"><a href="#">Order</a></li>
+				<li class="hideOnM"><a href="#">About</a></li>
+				<li class="menu" onclick="showSidebar()">
+					<a href="#">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="24px"
+							viewBox="0 -960 960 960"
+							width="24px"
+							fill="#000000"
+						>
+							<path
+								d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+							/></svg
+					></a>
+				</li>
+			</ul>
+		</nav>
+
+		<section class="home" id="home">
+			<div class="judulHome">
+				<h3>Selamat Datang di RIZZQ'S Kitchen</h3>
+				<p>Lore ipsum bla bla bla bla balbla bla bla bal bal bal</p>
+				<a href="#shop">Beli Sekarang</a>
+			</div>
+		</section>
+
+		<section class="shop" id="shop">
+			<h1>Menu</h1>
+			<label for="rowRekomendasi">Rekomendasi</label>
+			<div class="rekomendasi">
+				<div class="plate">
+					<img src="" alt="makanan" />
+				</div>
+
+				<div class="plate">
+					<img src="" alt="makanan" />
+				</div>
+
+				<div class="plate">
+					<img src="" alt="makanan" />
+				</div>
+
+				<div class="plate">
+					<img src="" alt="makanan" />
+				</div>
+
+				<div class="plate">
+					<img src="" alt="makanan" />
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" charset="utf-8">
+			function showSidebar() {
+				const sidebar = document.querySelector(".sidebar");
+
+				sidebar.style.display = "flex";
+			}
+
+			function hideSidebar() {
+				const sidebar = document.querySelector(".sidebar");
+
+				sidebar.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

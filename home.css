@@ -1,0 +1,207 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	background-image: linear-gradient(
+		to top left,
+		hsl(214, 31.8%, 91.4%),
+		hsl(213, 26.8%, 83.9%)
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-family: Segoe UI;
+}
+
+nav {
+	top: 0;
+	position: sticky;
+	background-color: hsl(55, 91.7%, 95.3%);
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+	z-index: 998;
+}
+
+nav ul {
+	display: flex;
+	width: 100%;
+	list-style: none;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav li {
+	height: 50px;
+	padding: 0 30px;
+}
+
+nav a {
+	height: 100%;
+	text-decoration: 0;
+	color: black;
+	display: flex;
+	align-items: center;
+}
+
+nav li:hover {
+	background-color: hsl(213, 26.8%, 83.9%);
+}
+
+nav li:first-child {
+	margin-right: auto;
+}
+
+.menu {
+	display: none;
+}
+
+.sidebar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 250px;
+	z-index: 999;
+	background-color: white;
+	box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.2);
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.sidebar li {
+	width: 100%;
+}
+
+.sidebar a {
+	width: 100%;
+}
+
+.home {
+	position: relative;
+	min-height: 100vh;
+	background-image: url("img/bgHome.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.judulHome {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	translate: 0 -50%;
+	height: max-content;
+	width: 40%;
+	padding: 5rem;
+	backdrop-filter: blur(4px);
+}
+
+.judulHome h3 {
+	color: white;
+	font-family: Sans-Serif;
+	font-weight: 600;
+	font-size: 3rem;
+	text-shadow: 1px 0px 5px black;
+	padding: 20px 0;
+}
+
+.judulHome p {
+	color: hsl(34, 100%, 91.8%);
+	text-shadow: 1px 0px 2px hsl(240, 3.7%, 15.9%);
+	margin: 10px;
+	font-size: 1.5rem;
+}
+
+.judulHome a {
+	text-decoration: none;
+	color: white;
+	background-color: hsl(31, 97.2%, 72.4%);
+	border: 0;
+	font-size: 2rem;
+	padding: 15px;
+	border-radius: 10px;
+	margin: 20px 0px;
+	width: max-content;
+}
+
+.judulHome a:hover {
+	cursor: pointer;
+	background-color: hsl(34, 100%, 91.8%);
+}
+
+.shop {
+	position: relative;
+	min-height: 100vh;
+	background-color: hsl(222, 47.4%, 11.2%);
+}
+
+.shop h1 {
+	text-align: center;
+	color: hsl(240, 4.9%, 83.9%);
+	font-size: 5rem;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+label {
+	font-size: 3rem;
+	color: white;
+}
+
+.rekomendasi {
+	max-width: 95%;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	overflow-x: auto;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	white-space: nowrap;
+}
+
+.plate {
+	height: 120px;
+	flex: 0 0 240px;
+	background-color: hsl(215, 16.3%, 46.9%);
+	border-radius: 20px;
+}
+
+.plate img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media (max-width: 800px) {
+	.hideOnM {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	.judulHome {
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		padding: 0;
+	}
+	.rekomendasi {
+		align-items: flex-start;
+		justify-content: flex-start;
+		border-top: 1px solid hsl(215, 25%, 26.7%);
+		border-bottom: 1px solid hsl(215, 25%, 26.7%);
+	}
+}
+
+@media (max-width: 400px) {
+	.sidebar {
+		width: 100%;
+	}
+}
