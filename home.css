@@ -24,10 +24,10 @@ nav {
 	z-index: 998;
 }
 
-.navMc{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+.navMc {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
 }
 
 nav ul {
@@ -224,6 +224,7 @@ label {
 
 .about {
 	padding-top: 3rem;
+	padding-bottom: 2rem;
 	text-align: center;
 	background-color: hsl(222, 47.4%, 11.2%);
 }
@@ -238,6 +239,15 @@ label {
 	color: hsl(204, 93.8%, 93.7%);
 	font-family: "Charm", cursive;
 	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.about a {
+	font-size: 3.2rem;
+	color: hsl(204, 93.8%, 93.7%);
+	font-family: "Charm", cursive;
+	font-weight: 600;
+	text-decoration: none;
 }
 
 .about p {
@@ -277,6 +287,9 @@ label {
 	}
 
 	.about h3 {
+		font-size: 2rem;
+	}
+	.about a {
 		font-size: 2rem;
 	}
 }
