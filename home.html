@@ -84,74 +84,142 @@
 			<label for="rekomendasi">Rekomendasi</label>
 			<div class="rekomendasi">
 				<div class="plate">
-					<img src="img/rek1.png" alt="makanan" />
+					<img
+						src="img/rek1.png"
+						alt="makanan"
+						onclick="beli('menu4')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/rek2.png" alt="makanan" />
+					<img
+						src="img/rek2.png"
+						alt="makanan"
+						onclick="beli('menu3')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/rek3.png" alt="makanan" />
+					<img
+						src="img/rek3.png"
+						alt="makanan"
+						onclick="beli('menu5')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/rek4.png" alt="makanan" />
+					<img
+						src="img/rek4.png"
+						alt="makanan"
+						onclick="beli('menu6')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/rek5.png" alt="makanan" />
+					<img
+						src="img/rek5.png"
+						alt="makanan"
+						onclick="beli('menu7')"
+					/>
 				</div>
 			</div>
 
 			<label for="menuLi">Menu Kami</label>
 			<div class="menuLi">
 				<div class="plate">
-					<img src="img/menu1.png" alt="makanan" />
+					<img
+						src="img/menu1.png"
+						alt="makanan"
+						onclick="beli('menu1')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu2.png" alt="makanan" />
+					<img
+						src="img/menu2.png"
+						alt="makanan"
+						onclick="beli('menu2')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu3.png" alt="makanan" />
+					<img
+						src="img/menu3.png"
+						alt="makanan"
+						onclick="beli('menu3')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu4.png" alt="makanan" />
+					<img
+						src="img/menu4.png"
+						alt="makanan"
+						onclick="beli('menu4')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu5.png" alt="makanan" />
+					<img
+						src="img/menu5.png"
+						alt="makanan"
+						onclick="beli('menu5')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu6.png" alt="makanan" />
+					<img
+						src="img/menu6.png"
+						alt="makanan"
+						onclick="beli('menu6')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu7.png" alt="makanan" />
+					<img
+						src="img/menu7.png"
+						alt="makanan"
+						onclick="beli('menu7')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu8.png" alt="makanan" />
+					<img
+						src="img/menu8.png"
+						alt="makanan"
+						onclick="beli('menu8')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu9.png" alt="makanan" />
+					<img
+						src="img/menu9.png"
+						alt="makanan"
+						onclick="beli('menu9')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu10.png" alt="makanan" />
+					<img
+						src="img/menu10.png"
+						alt="makanan"
+						onclick="beli('menu10')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu11.png" alt="makanan" />
+					<img
+						src="img/menu11.png"
+						alt="makanan"
+						onclick="beli('menu11')"
+					/>
 				</div>
 
 				<div class="plate">
-					<img src="img/menu12.jpg" alt="makanan" />
+					<img
+						src="img/menu12.jpg"
+						alt="makanan"
+						onclick="beli('menu12')"
+					/>
 				</div>
 			</div>
 		</section>
@@ -161,6 +229,32 @@
 			<h3>RIZZQ Abdul <a href="egg.html"> Simanjuntak </a></h3>
 			<p>Berdiri sejak tahun 1954</p>
 		</section>
+
+		<div class="popout">
+			<svg
+				onclick="hidePop()"
+				xmlns="http://www.w3.org/2000/svg"
+				height="40px"
+				viewBox="0 -960 960 960"
+				width="24px"
+				fill="hsl(0, 0%, 89.8%)"
+			>
+				<path
+					d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+				/>
+			</svg>
+			<div class="container-image">
+				<div class="gambarPop">
+					<img src="" alt="makanan" class="gambarShow" />
+				</div>
+			</div>
+			<div class="deskripsi">
+				<h5 class="namaMakanan">NoNok</h5>
+				<p class="deskMakanan">NoNok</p>
+				<div class="harga">Rp.000</div>
+				<button type="button">Beli</button>
+			</div>
+		</div>
 
 		<script type="text/javascript" charset="utf-8">
 			function showSidebar() {
@@ -173,6 +267,155 @@
 				const sidebar = document.querySelector(".sidebar");
 
 				sidebar.style.display = "none";
+			}
+
+			function hidePop() {
+				const pop = document.querySelector(".popout");
+
+				pop.style.display = "none";
+			}
+
+			function beli(id) {
+				const pop = document.querySelector(".popout");
+				const gambar = document.querySelector(".gambarShow");
+				const nama = document.querySelector(".namaMakanan");
+				const desk = document.querySelector(".deskMakanan");
+				const harga = document.querySelector(".harga");
+
+				pop.style.display = "flex";
+
+				const namaMenu1 = "Ramen";
+				const hargaMenu1 = "Rp.1000";
+				const gambarMenu1 = "img/menu1.png";
+				const deskMenu1 =
+					"Ramen adalah masakan mi kuah Jepang yang berasal dari Jepang dan Tiongkok.";
+				const namaMenu2 = "Panekuk";
+				const hargaMenu2 = "Rp.1000";
+				const gambarMenu2 = "img/menu2.png";
+				const deskMenu2 =
+					"Panekuk atau kue dadar adalah kue yang dibuat dari terigu, telur ayam, gula dan susu. Bahan-bahan dicampur dengan air membentuk adonan kental yang digoreng di atas wajan datar yang diolesi sedikit minyak. Setelah matang, panekuk bisa dihidangkan sewaktu masih hangat atau setelah dingin.";
+
+				const namaMenu3 = "Trufle Hitam";
+				const hargaMenu3 = "Rp.1000";
+				const gambarMenu3 = "img/menu3.png";
+				const deskMenu3 =
+					"Jamur yang sangat dihargai karena aroma dan rasanya yang unik. Truffle hitam sering digunakan sebagai topping atau bumbu dalam hidangan pasta, risotto, dan telur.";
+
+				const namaMenu4 = "Caviar Beluga";
+				const hargaMenu4 = "Rp.1000";
+				const gambarMenu4 = "img/menu4.png";
+				const deskMenu4 =
+					"Telur ikan sturgeon Beluga yang sangat langka dan mahal. Caviar ini terkenal dengan butiran besar dan rasa yang kompleks, biasanya disajikan dingin dengan blinis atau roti panggang.";
+
+				const namaMenu5 = "Kobe Steak";
+				const hargaMenu5 = "Rp.1000";
+				const gambarMenu5 = "img/menu5.png";
+				const deskMenu5 =
+					"Daging sapi premium dari Kobe, Jepang, yang terkenal dengan marbling (lemak dalam daging) yang sempurna. Daging ini sangat lembut dan juicy, sering disajikan sebagai steak atau sukiyaki.";
+
+				const namaMenu6 = "Lobster Thermidor";
+				const hargaMenu6 = "Rp.1000";
+				const gambarMenu6 = "img/menu6.png";
+				const deskMenu6 =
+					"Hidangan lobster mewah yang diolah dengan saus berbasis krim dan keju, lalu dipanggang hingga berwarna keemasan. Hidangan ini sering disajikan dengan nasi atau sayuran.";
+
+				const namaMenu7 = "Sushi Omakase";
+				const hargaMenu7 = "Rp.1000";
+				const gambarMenu7 = "img/menu7.png";
+				const deskMenu7 =
+					"Menu sushi mewah di mana chef yang menentukan hidangannya berdasarkan bahan segar terbaik hari itu. Pengalaman ini memberikan berbagai rasa dan tekstur yang kompleks dan otentik.";
+
+				const namaMenu8 = "Coq Aku Vin";
+				const hargaMenu8 = "Rp.1000";
+				const gambarMenu8 = "img/menu8.png";
+				const deskMenu8 =
+					"Masakan tradisional Perancis yang terdiri dari ayam yang dimasak dalam anggur merah, bersama jamur, bawang, dan bacon. Hidangan ini menawarkan rasa yang dalam dan kaya.";
+
+				const namaMenu9 = "Ravioli Robster";
+				const hargaMenu9 = "Rp.1000";
+				const gambarMenu9 = "img/menu9.png";
+				const deskMenu9 =
+					"Pasta ravioli yang diisi dengan daging lobster segar dan disajikan dengan saus krim yang lembut. Hidangan ini memadukan rasa manis dari lobster dengan kelembutan pasta.";
+
+				const namaMenu10 = "Beef Wellington";
+				const hargaMenu10 = "Rp.1000";
+				const gambarMenu10 = "img/menu10.png";
+				const deskMenu10 =
+					"Fillet daging sapi yang dilapisi dengan pate, jamur cincang, dan dibungkus dalam puff pastry, lalu dipanggang. Hidangan ini terkenal dengan presentasinya yang elegan dan rasanya yang kaya dan kompleks.";
+
+				const namaMenu11 = "Chateubriand";
+				const hargaMenu11 = "Rp.1000";
+				const gambarMenu11 = "img/menu11.png";
+				const deskMenu11 =
+					"Potongan tengah dari tenderloin sapi yang disajikan dengan saus Béarnaise. Hidangan ini terkenal karena kelembutannya yang luar biasa dan biasanya disajikan dengan kentang panggang dan sayuran.";
+
+				const namaMenu12 = "Foie Gras";
+				const hargaMenu12 = "Rp.1000";
+				const gambarMenu12 = "img/menu12.jpg";
+				const deskMenu12 =
+					"Hidangan berbahan dasar hati angsa atau bebek yang telah diumpankan khusus untuk menghasilkan tekstur lembut dan rasa kaya. Biasanya disajikan dengan roti panggang dan buah-buahan manis untuk mengimbangi kekayaannya.";
+
+				if (id == "menu1") {
+					gambar.src = gambarMenu1;
+					nama.innerHTML = namaMenu1;
+					desk.innerHTML = deskMenu1;
+					harga.innerHTML = hargaMenu1;
+				} else if (id == "menu2") {
+					gambar.src = gambarMenu2;
+					nama.innerHTML = namaMenu2;
+					desk.innerHTML = deskMenu2;
+					harga.innerHTML = hargaMenu2;
+				} else if (id == "menu3") {
+					gambar.src = gambarMenu3;
+					nama.innerHTML = namaMenu3;
+					desk.innerHTML = deskMenu3;
+					harga.innerHTML = hargaMenu3;
+				} else if (id == "menu4") {
+					gambar.src = gambarMenu4;
+					nama.innerHTML = namaMenu4;
+					desk.innerHTML = deskMenu4;
+					harga.innerHTML = hargaMenu4;
+				} else if (id == "menu5") {
+					gambar.src = gambarMenu5;
+					nama.innerHTML = namaMenu5;
+					desk.innerHTML = deskMenu5;
+					harga.innerHTML = hargaMenu5;
+				} else if (id == "menu6") {
+					gambar.src = gambarMenu6;
+					nama.innerHTML = namaMenu6;
+					desk.innerHTML = deskMenu6;
+					harga.innerHTML = hargaMenu6;
+				} else if (id == "menu7") {
+					gambar.src = gambarMenu7;
+					nama.innerHTML = namaMenu7;
+					desk.innerHTML = deskMenu7;
+					harga.innerHTML = hargaMenu7;
+				} else if (id == "menu8") {
+					gambar.src = gambarMenu8;
+					nama.innerHTML = namaMenu8;
+					desk.innerHTML = deskMenu8;
+					harga.innerHTML = hargaMenu8;
+				} else if (id == "menu9") {
+					gambar.src = gambarMenu9;
+					nama.innerHTML = namaMenu9;
+					desk.innerHTML = deskMenu9;
+					harga.innerHTML = hargaMenu9;
+				} else if (id == "menu10") {
+					gambar.src = gambarMenu10;
+					nama.innerHTML = namaMenu10;
+					desk.innerHTML = deskMenu10;
+					harga.innerHTML = hargaMenu10;
+				} else if (id == "menu11") {
+					gambar.src = gambarMenu11;
+					nama.innerHTML = namaMenu11;
+					desk.innerHTML = deskMenu11;
+					harga.innerHTML = hargaMenu11;
+				} else if (id == "menu12") {
+					gambar.src = gambarMenu12;
+					nama.innerHTML = namaMenu12;
+					desk.innerHTML = deskMenu12;
+					harga.innerHTML = hargaMenu12;
+				}
 			}
 		</script>
 	</body>

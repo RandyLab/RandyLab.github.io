@@ -187,7 +187,7 @@ label {
 .rekomendasi .plate {
 	height: 120px;
 	flex: 0 0 240px;
-	background-color: hsl(215, 16.3%, 46.9%);
+	background-color: black;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
@@ -198,6 +198,11 @@ label {
 	max-width: 100%;
 	height: auto;
 	border-radius: 5px;
+}
+
+.plate img:hover {
+	cursor: pointer;
+	opacity: 0.8;
 }
 
 .menuLi {
@@ -215,7 +220,7 @@ label {
 .menuLi .plate {
 	height: 300px;
 	flex: 0 0 300px;
-	background-color: hsl(215, 16.3%, 46.9%);
+	background-color: black;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
@@ -255,6 +260,92 @@ label {
 	font-size: 1.5rem;
 }
 
+.popout {
+	position: fixed;
+	display: none;
+	flex-direction: row;
+	width: 40vw;
+	padding: 3rem 1rem;
+	background-color: hsl(240, 5.9%, 10%);
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 1001;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-radius: 10px;
+	box-shadow: 4px 4px 20px black;
+}
+
+.popout svg {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+
+.container-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.gambarPop {
+	height: 150px;
+	width: 150px;
+	background-color: hsl(215, 16.3%, 46.9%);
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gambarPop img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.popout .deskripsi {
+	text-align: center;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.popout h5 {
+	padding-top: 1.2rem;
+	font-size: 1.5rem;
+	color: hsl(214, 94.6%, 92.7%);
+	border-bottom: solid 1px hsl(215, 25%, 26.7%);
+}
+
+.popout p {
+	color: hsl(55, 91.7%, 95.3%);
+	font-size: 0.7rem;
+	padding: 1rem;
+}
+
+.popout .harga {
+	padding-top: 1rem;
+	font-size: 1rem;
+	color: hsl(33, 100%, 96.5%);
+}
+
+.popout button {
+	font-size: 1rem;
+	padding: 5px 15px;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	background-color: hsl(38, 92.1%, 50.2%);
+	margin-top: 0.2rem;
+}
+
+.popout button:hover {
+	background-color: hsl(35, 91.7%, 32.9%);
+	cursor: pointer;
+}
+
 @media (max-width: 800px) {
 	.hideOnM {
 		display: none;
@@ -282,6 +373,16 @@ label {
 		height: 150px;
 		width: 150px;
 	}
+	.popout {
+		padding: 2rem 0;
+		flex-direction: column;
+		align-items: center;
+	}
+	.gambarPop {
+		height: 80px;
+		width: 80px;
+	}
+
 	label {
 		font-size: 1.5rem;
 	}
@@ -291,6 +392,9 @@ label {
 	}
 	.about a {
 		font-size: 2rem;
+	}
+	.popout {
+		width: 100%;
 	}
 }
 
