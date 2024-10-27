@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" href="img/icon.png" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pridi:wght@700&display=swap");
+		</style>
 		<title>RIZZQ's Kitchen</title>
 	</head>
 	<body>
@@ -13,8 +16,7 @@
 			<h1 id="judul">RIZZQ'S Kitchen</h1>
 			<img src="img/halal.png" alt="LOGO 2" />
 		</header>
-
-		<a href="home.html">
+		
 			<div class="logo_interaksi">
 				<img
 					src="img/spoon.png"
@@ -31,9 +33,8 @@
 				/>
 				<img src="img/fork.png" width="100px" class="fork" id="garpu" />
 			</div>
-		</a>
 
-		<footer>©rizzqKitchen @rizzqKitchen</footer>
+		<footer><p>©rizzqKitchen @rizzqKitchen</p></footer>
 
 		<script>
 			function showA() {
@@ -42,6 +43,10 @@
 
 				garpu.style.animation = "pilihS 1s ease-out infinite";
 				sendok.style.animation = "pilihF 1s ease-out infinite";
+				
+				setTimeout(() => {
+                window.location.href = 'home.html';
+				}, 2000);
 			}
 		</script>
 	</body>
