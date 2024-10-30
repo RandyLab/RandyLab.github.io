@@ -120,6 +120,7 @@ nav li:first-child {
   position: relative;
   min-height: 100vh;
   background-color: hsl(222, 47.4%, 11.2%);
+  padding-bottom: 3rem;
 }
 
 .shop h1 {
@@ -137,44 +138,22 @@ label {
   padding-left: 2rem;
 }
 
-.drink {
-  max-width: 95%;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  white-space: nowrap;
-}
-
-.drink .plate {
-  height: 120px;
-  flex: 0 0 240px;
-  background-color: black;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.drink img {
-  max-height: 120px;
+.drink img,
+.rekomendasi img {
+  border: white 1px groove;
 }
 
 .rekomendasi {
   max-width: 95%;
   display: flex;
   flex-direction: row;
-  gap: 10px;
   overflow-x: auto;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   white-space: nowrap;
   margin-bottom: 30px;
+  gap: 10px;
 }
 
 .rekomendasi .plate {
@@ -198,7 +177,8 @@ label {
   opacity: 0.8;
 }
 
-.menuLi {
+.menuLi,
+.drink {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -211,7 +191,8 @@ label {
   margin-bottom: 2rem;
 }
 
-.menuLi .plate {
+.menuLi .plate,
+.drink .plate {
   height: 300px;
   flex: 0 0 300px;
   background-color: black;
@@ -221,18 +202,24 @@ label {
   align-items: center;
 }
 
+.drink .plate {
+  height: 140px;
+  flex: 0 0 250px;
+}
+
 .about {
   padding-top: 3rem;
   padding-bottom: 2rem;
   text-align: center;
   background-color: hsl(222, 47.4%, 11.2%);
+  border-top: 1px solid black;
 }
 
 .about img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: black solid 1px;
+  border: rgb(255, 255, 255) solid 5px;
   box-shadow: 2px 5px 20px rgb(0, 0, 0);
 }
 
@@ -255,6 +242,12 @@ label {
 .about p {
   color: hsl(215, 20.2%, 65.1%);
   font-size: 1.5rem;
+}
+
+.medsos svg {
+  color: white;
+  margin-top: 1rem;
+  padding: 0 5px;
 }
 
 .popout {
@@ -303,7 +296,7 @@ label {
 
 .gambarPop img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -326,13 +319,20 @@ label {
   padding: 1rem;
 }
 
-.popout .harga {
+.popout .container-kesenjangan {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.popout .hargaRegular,
+.hargaEksklusif {
   padding-top: 1rem;
   font-size: 1rem;
   color: hsl(33, 100%, 96.5%);
 }
 
-.popout button {
+.reguler button {
   font-size: 1rem;
   padding: 5px 15px;
   border: 0;
@@ -340,10 +340,28 @@ label {
   color: white;
   background-color: hsl(38, 92.1%, 50.2%);
   margin-top: 0.2rem;
+  border: rgb(255, 255, 255) 1px groove;
 }
 
-.popout button:hover {
+.reguler button:hover {
   background-color: hsl(35, 91.7%, 32.9%);
+  cursor: pointer;
+}
+
+.eksklusif button {
+  font-size: 1rem;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: hsl(7, 92%, 50%);
+  margin-top: 0.2rem;
+  border: rgb(255, 255, 255) 1px groove;
+  box-shadow: 1px 1px 20px rgba(255, 0, 0, 0.568);
+}
+
+.eksklusif button:hover {
+  background-color: hsl(0, 92%, 33%);
   cursor: pointer;
 }
 
@@ -360,7 +378,7 @@ label {
     align-items: center;
     padding: 0;
   }
-  .rekomendasi, .drink{
+  .rekomendasi {
     align-items: flex-start;
     justify-content: flex-start;
     border-top: 1px solid hsl(215, 25%, 26.7%);

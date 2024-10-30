@@ -1,53 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>icon
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" href="img/icon.png" />
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pridi:wght@700&display=swap");
-		</style>
-		<title>RIZZQ's Kitchen</title>
-	</head>
-	<body>
-		<header>
-			<img src="img/star.png" alt="LOGO 1" />
-			<h1 id="judul">RIZZQ'S Kitchen</h1>
-			<img src="img/halal.png" alt="LOGO 2" />
-		</header>
-		
-			<div class="logo_interaksi">
-				<img
-					src="img/spoon.png"
-					width="100px"
-					class="spoon"
-					id="sendok"
-				/>
-				<img src="img/icon.png" alt="Logo interaksi" class="logoImg" />
-				<img
-					src="img/logoTeks.png"
-					alt="logo teks"
-					class="logoTeks"
-					onclick="showA()"
-				/>
-				<img src="img/fork.png" width="100px" class="fork" id="garpu" />
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/icon.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pridi:wght@700&display=swap");
+    </style>
+    <title>Situmorang's Kitchen</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/star.png" alt="LOGO 1" />
+      <h1 id="judul">Situmorang's Kitchen</h1>
+      <img src="img/halal.png" alt="LOGO 2" />
+    </header>
 
-		<footer><p>©rizzqKitchen @rizzqKitchen</p></footer>
+    <div class="logo_interaksi">
+      <img src="img/spoon.png" width="100px" class="spoon" id="sendok" />
+      <img src="img/icon.png" alt="Logo interaksi" class="logoImg" />
+      <img
+        src="img/logoTeks.png"
+        alt="logo teks"
+        class="logoTeks"
+        onclick="showA()"
+      />
+      <img src="img/fork.png" width="100px" class="fork" id="garpu" />
+    </div>
 
-		<script>
-			function showA() {
-				let garpu = document.getElementById("garpu");
-				let sendok = document.getElementById("sendok");
+    <footer><p>©SitumorangKitchen @SitumorangKitchen</p></footer>
 
-				garpu.style.animation = "pilihS 1s ease-out infinite";
-				sendok.style.animation = "pilihF 1s ease-out infinite";
-				
-				setTimeout(() => {
-                window.location.href = 'home.html';
-				}, 2000);
-			}
-		</script>
-	</body>
+    <script>
+      function showA() {
+        let garpu = document.getElementById("garpu");
+        let sendok = document.getElementById("sendok");
+
+        garpu.style.animation = "pilihS 1s ease-out infinite";
+        sendok.style.animation = "pilihF 1s ease-out infinite";
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 2000);
+      }
+    </script>
+  </body>
 </html>
